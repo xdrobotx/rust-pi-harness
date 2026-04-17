@@ -1,0 +1,11 @@
+{
+  "sessionDir": ".pi/sessions",
+
+  "extensions": [".pi/extensions/*.ts"],
+  "prompts": [".pi/prompts/**/*.md"],
+  "skills": [".pi/skills/**/*.md"],
+
+  "defaultProvider": "google-antigravity",
+  "defaultModel": "gemini-3-flash",
+  "defaultThinkingLevel": "medium"
+}

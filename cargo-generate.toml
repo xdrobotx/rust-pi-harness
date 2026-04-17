@@ -1,0 +1,22 @@
+[template]
+cargo_generate_version = ">=0.10.0"
+
+[placeholders.project-description]
+type = "string"
+prompt = "Project description?"
+default = "A Rust project with Pi agent integration."
+
+[placeholders.author-name]
+type = "string"
+prompt = "Author name?"
+default = "Developer"
+
+[placeholders.license]
+type = "string"
+prompt = "License (MIT/Apache-2.0)?"
+default = "MIT"
+
+[placeholders.rust-edition]
+type = "string"
+prompt = "Rust edition (2018/2021/2024)?"
+default = "2021"
