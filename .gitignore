@@ -22,3 +22,5 @@ target
 
 # Pi coding agent
 .pi/sessions/*.jsonl
+node_modules/
+package-lock.json

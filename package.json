@@ -1,0 +1,11 @@
+{
+  "name": "rust-pi-harness",
+  "version": "0.1.0",
+  "description": "Rust development template with Pi agent harness",
+  "dependencies": {},
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "latest",
+    "@mariozechner/pi-tui": "latest",
+    "tsx": "latest"
+  }
+}

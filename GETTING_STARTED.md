@@ -1,69 +1,34 @@
-# Getting Started with Rust Pi Harness
+# Rust Pi Agent Harness
 
-This guide explains how to use the Pi Coding Agent and its specialized subagents to build high-quality Rust projects.
+This guide explains how to build high-quality Rust projects using the **Facilitator** and the specialized specialist team.
 
-## 1. The Agent Team
+## 1. The specialist Team
 
-When you start this project, you have a full team at your disposal. You interact primarily with the **Orchestrator**, who delegates tasks to others.
-
-| Agent | When to use | Primary Output |
+| Specialist | Role | Boundary |
 | :--- | :--- | :--- |
-| **Orchestrator** | General interaction, planning, and coordination. | Task Plans & Summaries |
-| **Researcher** | Investigating crates, technical feasibility, or codebase logic. | Feasibility Reports |
-| **Architect** | Designing APIs, system structure, and trait hierarchies. | Design Documents |
-| **Coder** | Writing implementation code, refactoring, and logic. | Source Code |
-| **Validator** | Running tests, checking lints, and verifying fixes. | Verification Reports |
-| **Documenter** | Writing `rustdoc`, READMEs, and Mermaid diagrams. | Documentation |
+| **Facilitator** | Coordination & Routing | Does not generate technical content. |
+| **Researcher** | Rust Crate/Ecosystem & General Research | Does not write code or designs. |
+| **Architect** | API Design & Structure | Does not write production code. |
+| **Coder** | Logic & Implementation | Only one with `src/` write access. |
+| **Validator** | QA & Verification | Does not implement features. |
+| **Documenter** | READMEs & Mermaid Diagrams | Does not write production logic. |
 
-## 2. Core Workflows
+## 2. The "Transparent Waterfall" Workflow
 
-### Phase 1: Discovery & Feasibility
-Before coding, use the `/feasibility` command.
-- **Goal**: Validate if your idea is technically sound in Rust.
-- **Process**: The Researcher looks for risks and crates, while the Architect sketches a viability blueprint.
-- **Command**: `/feasibility "Your idea description"`
+1. **Intake**: Ask the **Facilitator** for a feature or research.
+2. **Delegation**: The Facilitator will call the relevant specialist via a tool.
+3. **Activity**: You will see a separate, color-coded response header for each specialist.
+4. **Fidelity**: Each specialist uses the artifacts produced by the previous turn.
 
-### Phase 2: Design
-Once the idea is validated, ask the Orchestrator to have the Architect design the API.
-- **Deliverable**: A `DESIGN.md` file with Mermaid diagrams.
-- **Command**: "Ask the Architect to design the public API for the data processor module."
+## 3. Specialist Management
 
-### Phase 3: Implementation (TDD)
-Use the `tdd` skill to drive implementation.
-- **Process**: Coder writes a failing test, then the logic, then refactors.
-- **Command**: "Start the TDD cycle for the feature we just designed."
+Use the `/team` command to:
+- Toggle specialists on/off for specific project phases.
+- Assign specific LLM models to specific specialists (coming soon).
 
-### Phase 4: Verification
-Before finalizing, always involve the Validator.
-- **Process**: Validator runs `cargo clippy` and `cargo test`.
-- **Command**: "Have the Validator verify the current implementation."
+## 4. Useful Commands
 
-## 3. Best Practices
-
-### Output Validation
-The Orchestrator is configured to perform **Quality Control**. If an agent produces code that doesn't compile or a report that is too vague, the Orchestrator will intervene. You can also manually ask: *"Orchestrator, did the Coder follow the Architect's design exactly?"*
-
-### Visual Documentation
-This template uses **Mermaid.js**. When you need to understand complex logic, ask: *"Researcher, can you provide a Mermaid flowchart of how data moves through the `worker` module?"*
-
-### Agent Restrictions
-To maintain high code quality, agents are restricted:
-- The **Researcher** and **Architect** cannot modify production code.
-- The **Coder** cannot change the architectural design without approval.
-- The **Validator** cannot implement features.
-
-## 4. File Structure
-
-- **`README.md`**: Your project's main documentation (to be populated by the **Documenter**).
-- **`TEMPLATE_GUIDE.md`**: A quick reference for the template features.
-- **`GETTING_STARTED.md`**: This detailed manual.
-- **`.pi/`**: Contains the agents, skills, and prompts that power your development team.
-
-## 5. Useful Commands
-
-- `/init`: Greet the team and confirm project setup.
-- `/feasibility`: Start a strategic research session.
-- `/cargo`: View available cargo shortcuts.
-- `/mermaid`: See diagramming syntax.
-
-Happy coding!
+- `/init`: Initialize the team.
+- `/team`: Manage your specialists.
+- `/cargo`: Standard Rust build commands.
+- `/mermaid`: Diagram syntax help.

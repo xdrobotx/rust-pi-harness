@@ -6,7 +6,7 @@ This document describes how to use this template and its integrated Pi agents. *
 
 - **Multi-Agent Orchestration**: A Lead Orchestrator coordinating five specialized subagents (Architect, Coder, Researcher, Validator, Documenter).
 - **Safety Guardrails**: Strict **Restrictions** and **Deliverables** for each agent.
-- **Feasibility & Discovery**: Built-in workflows for technical brainstorming via `/feasibility`.
+- **Feasibility & Discovery**: Built-in workflows for technical brainstorming via `/fstudy`.
 - **Visual Documentation**: Standardized **Mermaid.js** integration.
 - **Integrated Skills**: Pre-configured skills for `cargo`, `git`, `tdd`, and `mermaid`.
 
@@ -21,7 +21,7 @@ This document describes how to use this template and its integrated Pi agents. *
 2. **Start Brainstorming**:
    If you have a new idea, start a feasibility study:
    ```text
-   /feasibility "my awesome idea"
+   /fstudy "my awesome idea"
    ```
 
 3. **Generate your Project README**:

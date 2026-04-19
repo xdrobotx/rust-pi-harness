@@ -1,5 +1,8 @@
+//! Main entry point for the {{project-name}} application.
+
+/// Main application function.
 fn main() {
-    println!("Hello, world! This project is managed with Pi coding agent.");
+    println!("Hello, world! This project is managed with the Pi agent harness.");
 }
 
 #[cfg(test)]
